@@ -1,4 +1,4 @@
-## Lando install
+# Local install
 
 ```bash
 git clone git@github.com:thinktandem/devwithlando.git
@@ -9,7 +9,14 @@ lando composer install
 
 # Start up the site
 lando start
+
+# copy the env file
+cp .env.example.lando .env
+lando wp package install aaemnnosttv/wp-cli-dotenv-command
+lando wp dotenv salts regenerate
 ```
+
+
 
 
 # [Bedrock](https://roots.io/bedrock/)
