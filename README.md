@@ -9,7 +9,7 @@ _Note: Don't init your repo with a README_
 cd yoursite
 git remote add bedrock git@github.com:thinktandem/bedrock.git
 git fetch bedrock
-git rebase bedrock/master
+git pull bedrock master --rebase
 
 # Init Your Site
 lando init --recipe wordpress
