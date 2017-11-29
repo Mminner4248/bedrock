@@ -3,17 +3,19 @@
 ## This repo is a boilerplate for Tandem's WordPress Sites
 ### First time run on your WordPress Site utlizing this repo:
 
+_Note: Don't init your repo with a README_
+
 ```bash
 cd yoursite
 git remote add bedrock git@github.com:thinktandem/bedrock.git
 git fetch bedrock
 git rebase bedrock/master
 
-# Install dependencies
-lando composer install
-
 # Init Your Site
 lando init --recipe wordpress
+
+# Install dependencies
+lando composer install
 
 # Start up the site
 lando start
