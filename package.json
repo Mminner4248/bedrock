@@ -5,7 +5,7 @@
   "scripts": {
     "setup": "npm i && npm run setup:db && npm run setup:plugins",
     "setup:db":  "lando wp core install --url=http://CHANGEME.lndo.site --title=CHANGEME --admin_user=CHANGEME --admin_password=CHANGEME --admin_email=CHANGE@ME.com --skip-email",
-    "setup:plugins": "lando wp plugin activate wp-cfm && lando wp config pull Install",
+    "setup:plugins": "lando wp plugin activate wp-cfm && lando wp config pull install",
     "start": "npm i",
     "predeploy": "npm start",
     "deploy": "npm run deploy:removegit",
