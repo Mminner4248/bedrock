@@ -1,5 +1,5 @@
 {
     "active_plugins": "a:3:{i:0;s:30:\"advanced-custom-fields\/acf.php\";i:1;s:23:\"debug-bar\/debug-bar.php\";i:2;s:17:\"wp-cfm\/wp-cfm.php\";}",
     "current_theme": "My Timber Starter Theme",
-    ".label": "Install"
+    ".label": "install"
 }
