@@ -1,0 +1,22 @@
+{
+  "name": "@thinktandem/bedrock",
+  "version": "0.0.1",
+  "license": "GPL-2.0",
+  "scripts": {
+    "setup": "npm i && npm run setup:db && npm run setup:plugins",
+    "setup:db":  "lando wp core install --url=http://CHANGEME.lndo.site --title=CHANGEME --admin_user=CHANGEME --admin_password=CHANGEME --admin_email=CHANGE@ME.com --skip-email",
+    "setup:plugins": "lando wp plugin activate wp-cfm && wp config pull Install",
+    "start": "npm i",
+    "predeploy": "npm start",
+    "deploy": "npm run deploy:removegit",
+    "deploy:removegit": "find web/ -type d -name '.git*' -exec rm -rf {} +"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thinktandem/bedrock.git"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0"
+  }
+}

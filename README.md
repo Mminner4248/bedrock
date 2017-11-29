@@ -1,5 +1,7 @@
-# This site is a boilerplate for our WordPress Sites
-## To utilize this boilerplate locally, do the following within your WordPress Site
+**This boilerplate is a fork of https://github.com/roots/bedrock . Go to that url to get the full README for the stack.**
+
+## This repo is a boilerplate for Tandem's WordPress Sites
+### First time run on your WordPress Site utlizing this repo:
 
 ```bash
 cd yoursite
@@ -20,4 +22,16 @@ lando wp dotenv salts regenerate
 ```
 Go into the .env file and change WP_HOME=http://CHANGEME.lndo.site to the proper url.
 
-**This boilerplate is a fork of https://github.com/roots/bedrock . Go to that url to get the full README for the stack.***
+Go into the package.json and change the setup:db line and replace items that say CHANGEME with your site's information:
+
+```bash
+lando wp core install --url=http://CHANGEME.lndo.site --title=CHANGEME --admin_user=CHANGEME --admin_password=CHANGEME --admin_email=CHANGE@ME.com --skip-email```
+```
+
+Then run:
+
+```bash
+npm run setup
+npm start
+```
+
