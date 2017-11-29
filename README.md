@@ -12,6 +12,9 @@ git rebase bedrock/master
 # Install dependencies
 lando composer install
 
+# Init Your Site
+lando init --recipe wordpress
+
 # Start up the site
 lando start
 

@@ -1,5 +1,0 @@
-name: devwithlando
-recipe: wordpress
-config:
-  webroot: web
-  xdebug: true
