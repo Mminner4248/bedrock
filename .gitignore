@@ -22,3 +22,6 @@ vendor/*
 
 # node
 node_modules/*
+
+# master readme
+README.md
