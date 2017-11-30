@@ -3,9 +3,7 @@
   "version": "0.0.1",
   "license": "GPL-2.0",
   "scripts": {
-    "setup": "npm i && npm run setup:db && npm run setup:plugins",
-    "setup:db":  "lando wp core install --url=http://CHANGEME.lndo.site --title=CHANGEME --admin_user=CHANGEME --admin_password=CHANGEME --admin_email=CHANGE@ME.com --skip-email",
-    "setup:plugins": "lando wp plugin activate wp-cfm && lando wp config pull install",
+    "setup": "chmod +x build.sh && ./build.sh",
     "start": "npm i",
     "predeploy": "npm start",
     "deploy": "npm run deploy:removegit",
