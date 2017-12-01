@@ -14,14 +14,7 @@ web/.htaccess
 .env
 .env.*
 !.env.example
-!.env.lando
 
 # Composer
 vendor/*
 !vendor/.gitkeep
-
-# node
-node_modules/*
-
-# master readme
-README.md
