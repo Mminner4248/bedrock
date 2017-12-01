@@ -1,3 +1,14 @@
+## Tandem's Fork of [Bedrock](https://roots.io/bedrock/)
+
+This fork contains additional logic so that it can be easily used on:
+
+1. [platform.sh](https://platform.sh/)
+
+The major difference is that we are not using the .env file.  Instead we are loading the specific hosting platform's config into the application.php.  We are also including the additional settings / config added by bedrock.
+
+For quick and easy setup use [Tandem's WP Boilerplate](https://github.com/thinktandem/wp-boilerplate)
+
+
 # [Bedrock](https://roots.io/bedrock/)
 [![Packagist](https://img.shields.io/packagist/v/roots/bedrock.svg?style=flat-square)](https://packagist.org/packages/roots/bedrock)
 [![Build Status](https://img.shields.io/travis/roots/bedrock.svg?style=flat-square)](https://travis-ci.org/roots/bedrock)
