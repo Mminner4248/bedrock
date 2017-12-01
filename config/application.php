@@ -10,11 +10,19 @@ $webroot_dir = $root_dir . '/web';
 // Platform.sh settings to override the env.
 if (isset($_ENV['PLATFORM_RELATIONSHIPS'])) {
 
+  $table_prefix  = 'wp_';
+
   // The Platform.sh configuration file only acts if it's run on Platform.sh,
   // and skips any configuration constants that are already defined.
   $file = __DIR__ . '/environments/wp-config-platformsh.php';
   if (file_exists($file)) {
     include($file);
+  }
+
+  // Override wp-config.platformsh.php setting.
+  // Doing this to keep the config file pure.
+  if (defined('WP_HOME')) {
+    define('WP_SITEURL', WP_HOME . '/wp');
   }
 
   /**
