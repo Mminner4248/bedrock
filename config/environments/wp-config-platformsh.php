@@ -41,7 +41,7 @@ if (isset($_ENV['PLATFORM_ROUTES'])) {
 if (!defined('WP_HOME')) {
   // Change site URL per environment.
   define('WP_HOME', $site_scheme . '://' . $site_host);
-  define('WP_SITEURL', WP_HOME);
+  define('WP_SITEURL', WP_HOME . '/wp');
 }
 
 // Set all of the necessary keys to unique values, based on the Platform.sh

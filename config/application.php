@@ -14,15 +14,14 @@ if (isset($_ENV['PLATFORM_RELATIONSHIPS'])) {
 
   // The Platform.sh configuration file only acts if it's run on Platform.sh,
   // and skips any configuration constants that are already defined.
+  //
+  // Note, we updated the WP_SITEURL from
+  // define('WP_SITEURL', WP_HOME)
+  // to
+  // define('WP_SITEURL', WP_HOME . '/wp');
   $file = __DIR__ . '/environments/wp-config-platformsh.php';
   if (file_exists($file)) {
     include($file);
-  }
-
-  // Override wp-config.platformsh.php setting.
-  // Doing this to keep the config file pure.
-  if (defined('WP_HOME')) {
-    define('WP_SITEURL', WP_HOME . '/wp');
   }
 
   /**
