@@ -6,7 +6,6 @@ $root_dir = dirname(__DIR__);
 /** @var string Document Root */
 $webroot_dir = $root_dir . '/web';
 
-
 // Platform.sh settings to override the env.
 if (isset($_ENV['PLATFORM_RELATIONSHIPS'])) {
 
@@ -31,6 +30,29 @@ if (isset($_ENV['PLATFORM_RELATIONSHIPS'])) {
   define('WP_CONTENT_DIR', $webroot_dir . CONTENT_DIR);
   define('WP_CONTENT_URL', WP_HOME . CONTENT_DIR);
 
+}
+// Pantheon settings to override the env.
+elseif (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
+  $table_prefix  = 'wp_';
+
+  // The Pantheon configuration file only acts if it's run on Pantheon,
+  // and skips any configuration constants that are already defined.
+  //
+  // Note, we updated the WP_SITEURL from
+  // define('WP_SITEURL', $scheme . '://' . $_SERVER['HTTP_HOST']);
+  // to
+  // define('WP_SITEURL', WP_HOME . '/wp');
+  $file = __DIR__ . '/environments/wp-config-pantheon.php';
+  if (file_exists($file)) {
+    include($file);
+  }
+
+  /**
+   * Custom Content Directory
+   */
+  define('CONTENT_DIR', '/app');
+  define('WP_CONTENT_DIR', $webroot_dir . CONTENT_DIR);
+  define('WP_CONTENT_URL', WP_HOME . CONTENT_DIR);
 }
 else {
   /**
