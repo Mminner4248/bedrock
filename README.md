@@ -3,6 +3,7 @@
 This fork contains additional logic so that it can be easily used on:
 
 1. [platform.sh](https://platform.sh/)
+2. [Pantheon](https://pantheon.io)
 
 The major difference is that we are not using the .env file.  Instead we are loading the specific hosting platform's config into the application.php.  We are also including the additional settings / config added by bedrock.
 
