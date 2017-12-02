@@ -6,7 +6,11 @@ This fork contains additional logic so that it can be easily used on:
 
 The major difference is that we are not using the .env file.  Instead we are loading the specific hosting platform's config into the application.php.  We are also including the additional settings / config added by bedrock.
 
-For quick and easy setup use [Tandem's WP Boilerplate](https://github.com/thinktandem/wp-boilerplate)
+** Lando **
+
+We streamline our localdev with [Lando](https://github.com/lando/lando), you should too.  The hash values in the .env can cause problems sometimes with lando.  So you can either not install those value or copy the .env.lando to .env instead.  Also change WP_HOME=demosite to your lndo.site domain.
+
+For quick and easy setup use [Tandem's WP Boilerplate](https://github.com/thinktandem/wp-boilerplate) instead.
 
 
 # [Bedrock](https://roots.io/bedrock/)
